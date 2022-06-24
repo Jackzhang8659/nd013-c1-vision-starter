@@ -100,3 +100,6 @@ ENV PATH="$PATH:/root/gcloud/google-cloud-sdk/bin"
 
 # Install keras 2.5.0rc0 to match the version of tensorflow
 RUN pip install keras==2.5.0rc0
+
+# Downgrade numpy to 1.17.4 to fix 'numpy.float64' object cannot be interpreted as an integer' problem
+RUN pip install numpy==1.17.4
